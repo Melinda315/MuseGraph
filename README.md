@@ -20,13 +20,6 @@ The official implementation of Graph-oriented Instruction Tuning of Large Langua
 python src/lora_process.py
 ```
 
-## Checkpoints
-
----
-
-We provide the released checkpoints for reproducibility and further research:
-
-- [MuseGraph]()  (coming soon)
 
 ## Data Download
 

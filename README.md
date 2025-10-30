@@ -14,7 +14,34 @@ The official implementation of Graph-oriented Instruction Tuning of Large Langua
 
 ---
 
+**Dataset Generation**
+
+After downloading the required dataset files, you can use the dataset generation scripts in the `data` directory (e.g., `nc_imdb.ipynb`) to prepare the corresponding datasets.  
+For **CoT-based instruction generation**, please refer to the **Prompt Template** section.  
+
+After generating and mixing multiple datasets, you can configure and register them in `dataset_info.json` under the **llama-factory** directory, for example:
+
+```python
+  "train_nc_IMDB": {
+    "file_name": "train_nc_IMDB.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  }
+```
+
+
+
+
+
+
+
+
 **Train**&&**Test**&&**Evaulate**
+
+The script `lora_process.py` provides an end-to-end pipeline for model training, testing, and evaluation:
 
 ```python
 python src/lora_process.py
